@@ -1,0 +1,3 @@
+[submodule "Assets/com.joyteam.core"]
+	path = Assets/com.joyteam.core
+	url = https://github.com/deadbit-dev/com.joyteam.core.git
