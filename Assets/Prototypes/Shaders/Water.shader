@@ -1,4 +1,4 @@
-Shader "Universal Render Pipeline/Water"
+Shader "Unlit/Water"
 {
     Properties
     {
@@ -13,7 +13,6 @@ Shader "Universal Render Pipeline/Water"
     {
         Tags
         {
-            "RenderPipeline" = "UniversalRenderPipeline"
             "RenderType" = "Opaque"
             "Queue" = "Geometry"
         }
@@ -43,12 +42,10 @@ Shader "Universal Render Pipeline/Water"
             };
 
             CBUFFER_START(UnityPerMaterial)
-
-            float4 _BaseColor;
-            float4 _ShallowWaterColor;
-            float _Depth;
-            float _Strength;
-
+                float4 _BaseColor;
+                float4 _ShallowWaterColor;
+                float _Depth;
+                float _Strength;
             CBUFFER_END
 
             FragmentData VertexPass(MeshData input)
@@ -63,9 +60,9 @@ Shader "Universal Render Pipeline/Water"
                 return _ShallowWaterColor;
             }
 
-                ENDHLSL
+            ENDHLSL
         }
     }
 
-    //FallBack "Hidden/InternalErrorShader"
+    FallBack "Hidden/InternalErrorShader"
 }
