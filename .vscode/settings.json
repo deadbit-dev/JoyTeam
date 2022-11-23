@@ -43,7 +43,7 @@
         "**/*.unity":true,
         "build/":true,
         "Build/":true,
-        "Library/":true,
+        //"Library/":true,
         "library/":true,
         "obj/":true,
         "Obj/":true,
